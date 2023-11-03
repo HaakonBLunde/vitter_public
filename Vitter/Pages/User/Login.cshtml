@@ -1,0 +1,28 @@
+@page
+@model Vitter.Pages.User.Login
+
+@{
+    ViewData["Title"] = "Sign in";
+}
+
+@if (Model.HasError)
+{
+    <div class="alert alert-danger">
+        Wrong username or password
+    </div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="UsernameInput">Username</label>
+        <input type="text" class="form-control" id="UsernameInput" name="Username" placeholder="Enter a username">
+    </div>
+    <div class="form-group">
+        <label for="PasswordInput">Password</label>
+        <input type="password" class="form-control" id="PasswordInput" name="Password" placeholder="Password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign in</button>
+    <a asp-page="Register" class="btn btn-secondary">Register</a>
+    <a asp-page="Forgot" class="btn btn-secondary">Forgot password</a>
+</form>

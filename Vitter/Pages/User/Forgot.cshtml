@@ -1,0 +1,31 @@
+@page
+@model Vitter.Pages.User.Forgot
+
+@{
+    ViewData["Title"] = "Forgot password";
+}
+
+<h1>Forgot password</h1>
+<p>Enter your email address to reset your password.</p>
+
+@if (!string.IsNullOrEmpty(Model.Error))
+{
+    <div class="alert alert-danger">
+        @Model.Error
+    </div>
+}
+
+@if (Model.Success)
+{
+    <div class="alert alert-success">
+        We have sent you an email with instructions on how to reset your password.
+    </div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="EmailInput">Email address</label>
+        <input type="email" class="form-control" id="EmailInput" name="Email" placeholder="Enter email">
+    </div>
+    <button type="submit" class="btn btn-primary">Reset password</button>
+</form>

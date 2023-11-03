@@ -1,0 +1,31 @@
+@page
+@model Vitter.Pages.Post.Search
+
+@{
+    ViewData["Title"] = "Search";
+}
+<form method="get">
+    <div class="form-group">
+        <input type="text" name="search" class="form-control" placeholder="Search!"/>
+    </div>
+</form>
+@Html.Raw(Model.SearchString)
+
+@foreach (var p in Model.Posts)
+{
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-2">
+                    <img class="img-fluid" src="@p.PhotoUri"/>
+                </div>
+                <div class="col-10">
+                    @Html.Raw(p.Content)
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            By <a asp-page="/Profile/Index" asp-route-username="@p.Username">@@@p.Username</a> at @p.CreatedAt.ToString("yyyy-MM-dd hh:mm")
+        </div>
+    </div>
+}

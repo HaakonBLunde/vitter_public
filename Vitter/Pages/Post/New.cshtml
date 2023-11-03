@@ -1,0 +1,16 @@
+@page
+@model Vitter.Pages.Post.New
+
+@{
+    ViewData["Title"] = "New post";
+}
+
+<h1>New veet</h1>
+
+<form method="post">
+    <div class="form-group">
+        <textarea class="form-control" name="content" maxlength="240" placeholder="What is on your mind?"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Post</button>
+</form>

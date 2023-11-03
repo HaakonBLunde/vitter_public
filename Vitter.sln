@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitter", "Vitter\Vitter.csproj", "{641A89D1-BDA4-4E6B-8470-0F9C7D171144}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{641A89D1-BDA4-4E6B-8470-0F9C7D171144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641A89D1-BDA4-4E6B-8470-0F9C7D171144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641A89D1-BDA4-4E6B-8470-0F9C7D171144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641A89D1-BDA4-4E6B-8470-0F9C7D171144}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

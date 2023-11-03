@@ -1,0 +1,31 @@
+@page
+@model Vitter.Pages.User.Register
+
+@{
+    ViewData["Title"] = "Register a new user";
+}
+
+@if (!string.IsNullOrEmpty(Model.Error))
+{
+    <div class="alert alert-danger">
+        @Model.Error;
+    </div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="UsernameInput">Username</label>
+        <input type="text" class="form-control" id="UsernameInput" name="Username" placeholder="Enter a username">
+    </div>
+    <div class="form-group">
+        <label for="EmailInput">Email address</label>
+        <input type="email" class="form-control" id="EmailInput" name="Email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="PasswordInput">Password</label>
+        <input type="password" class="form-control" id="PasswordInput" name="Password" placeholder="Password">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

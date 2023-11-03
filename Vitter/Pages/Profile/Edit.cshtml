@@ -1,0 +1,30 @@
+@page "{id:long}"
+@model Vitter.Pages.Profile.Edit
+
+@{
+    ViewData["Title"] = "Edit profile";
+}
+
+<h1>Edit profile</h1>
+
+@if (!string.IsNullOrEmpty(Model.Error))
+{
+    <div class="alert alert-danger">
+        @Model.Error;
+    </div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="AboutInput">About</label>
+        <textarea class="form-control" id="AboutInput" asp-for="Form.About" placeholder="Tell us about yourself"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="PhotoUriInput">Profile photo</label>
+        <input type="url" class="form-control" id="PhotoUriInput" asp-for="Form.PhotoUri" placeholder="Enter a link to an image">
+        <small id="PhotoUriHelp" class="form-text text-muted">Vitter doesn't support file uploads, but you can include a profile image by link</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update profile</button>
+</form>
