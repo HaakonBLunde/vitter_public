@@ -38,6 +38,7 @@ public class Forgot : PageModel
 }
 
 public class ForgotPasswordForm
-{
+{   
+    //hortse
     public string Email { get; set; }
 }
